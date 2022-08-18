@@ -34,29 +34,29 @@ const getLockIdFromPassword = password => {
 }
 
 const gridMatrix = [
-    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-    [1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,20,20,0,0,1],
-    [1,0,0,0,1,0,0,1,0,0,1,1,1,0,1,1,1,1,1,0,0,1,1,1,20,1,0,1,20,0,20,20,20,20,0,1],
-    [1,0,0,0,1,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,1,20,20,0,1,0,0,20,1,0,1,20,20,20,0,1],
-    [1,0,1,1,0,0,1,0,1,0,0,1,0,1,0,0,0,1,1,1,20,20,20,20,1,0,0,20,1,0,0,1,1,1,0,1],
-    [1,0,0,0,0,0,1,0,1,0,0,1,0,1,0,0,1,20,20,20,20,1,20,20,1,20,0,20,1,20,1,20,20,20,0,1],
-    [1,0,1,1,0,1,0,0,0,0,0,1,0,0,1,1,20,20,1,1,1,20,20,20,1,20,0,20,1,0,1,20,20,20,0,1],
-    [1,0,0,0,1,0,0,0,0,1,0,0,0,1,20,20,20,1,20,20,20,1,20,20,20,20,0,0,1,0,20,1,20,1,0,1],
-    [1,0,0,0,1,0,0,0,0,0,1,0,0,1,20,1,1,20,20,20,20,20,1,1,1,1,1,1,20,0,0,20,1,20,0,1],
-    [1,0,0,0,0,0,0,0,0,0,1,0,0,1,20,20,20,1,20,20,20,20,20,20,20,20,20,20,20,1,0,0,1,20,0,1],
-    [1,0,0,0,0,0,0,0,0,0,0,1,0,1,20,20,20,0,1,20,20,1,20,1,20,1,20,1,20,20,1,0,20,20,0,1],
-    [1,0,0,0,0,0,0,0,0,0,1,0,0,1,20,20,20,1,20,20,20,20,20,20,20,20,20,20,20,1,0,0,1,20,0,1],
-    [1,0,0,0,1,0,0,0,0,0,1,0,0,1,20,1,1,20,20,20,20,20,1,1,1,1,1,1,20,0,0,20,1,20,0,1],
-    [1,0,0,0,1,0,0,0,0,1,0,0,0,1,20,20,20,1,20,20,20,1,20,0,0,0,0,0,1,0,20,1,20,1,0,1],
-    [1,0,1,1,0,1,0,0,0,0,0,1,0,0,1,1,20,20,1,1,1,20,20,20,1,0,0,0,1,0,1,20,20,20,0,1],
-    [1,0,0,0,0,0,1,0,1,0,0,1,0,1,0,0,1,20,20,20,20,1,20,20,1,0,0,0,1,20,1,20,20,20,0,1],
-    [1,0,1,1,0,0,1,0,1,0,0,1,0,1,0,0,0,1,1,1,20,20,20,20,1,0,0,0,1,0,0,1,1,1,0,1],
-    [1,0,0,0,1,0,1,0,1,0,0,0,0,1,0,0,0,0,0,0,1,20,20,0,1,0,0,0,1,0,1,0,0,0,0,1],
-    [1,0,0,0,1,0,0,1,0,0,1,1,1,0,1,1,1,1,1,0,0,1,1,1,20,1,0,1,20,0,20,0,0,0,0,1],
-    [1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1],
-    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
-                
-    ];
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    [1,0,0,1,0,0,1,0,0,1,0,0,0,0,1,0,0,0,1,0,0,0,30,0,0,0,0,0,1,1,1,0,0,1],
+    [1,0,0,30,0,0,1,0,0,1,0,0,0,0,30,0,0,0,30,0,0,0,1,1,1,1,1,0,1,1,1,1,0,1],
+    [1,1,1,1,0,0,1,30,1,1,0,0,0,0,1,1,1,1,1,0,0,0,30,0,0,0,30,0,30,0,0,1,0,1],
+    [1,0,0,1,0,0,0,0,0,1,0,0,0,0,30,0,0,0,1,0,0,0,1,0,0,0,1,0,1,0,0,30,0,1],
+    [1,0,0,30,0,0,0,0,0,30,0,0,0,0,1,0,0,0,1,0,0,0,1,1,1,1,1,1,1,0,0,1,0,1],
+    [1,1,1,1,0,0,0,0,0,1,0,0,0,0,1,0,0,0,30,0,0,0,30,0,0,0,0,0,30,0,0,1,0,1],
+    [1,0,0,1,0,0,0,0,0,1,1,1,1,30,1,1,1,1,1,0,0,0,1,0,0,0,0,0,1,0,0,30,0,1],
+    [1,0,0,30,0,0,0,0,0,1,0,30,0,0,1,0,0,0,1,0,0,0,1,1,1,1,1,1,1,0,0,1,0,1],
+    [1,1,1,1,0,0,0,0,0,30,0,1,0,0,30,0,0,0,30,0,0,0,30,0,0,0,0,0,30,0,0,1,0,1],
+    [1,0,0,1,1,1,30,1,1,1,0,1,0,0,1,1,1,1,1,1,30,1,1,0,0,0,0,0,1,0,0,30,0,1],
+    [1,0,0,30,0,0,0,0,0,30,0,1,0,0,30,0,0,0,1,0,0,0,30,0,0,0,0,0,1,0,0,1,0,1],
+    [1,1,1,1,0,0,0,0,0,1,0,30,0,0,1,0,0,0,30,0,0,0,1,1,1,1,1,1,1,0,0,1,0,1],
+    [1,0,0,1,0,0,0,0,0,1,1,1,1,30,1,1,1,1,1,0,0,0,1,0,0,0,0,0,30,0,0,30,0,1],
+    [1,0,0,30,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,0,0,0,30,0,0,0,0,0,1,0,0,1,0,1],
+    [1,1,1,1,0,0,0,0,0,30,0,0,0,0,1,0,0,0,1,0,0,0,1,1,1,1,1,1,1,0,0,1,0,1],
+    [1,0,0,1,0,0,0,0,0,1,0,0,0,0,30,0,0,0,30,0,0,0,30,0,0,0,30,0,30,0,0,30,0,1],
+    [1,0,0,30,0,0,1,30,1,1,0,0,0,0,1,1,1,1,1,0,0,0,1,0,0,0,1,0,1,0,0,1,0,1],
+    [1,1,1,1,0,0,1,0,0,1,0,0,0,0,30,0,0,0,1,0,0,0,1,1,1,1,1,0,1,1,1,1,0,1],
+    [1,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0,0,0,30,0,0,0,30,0,0,0,0,0,1,1,1,0,0,1],
+    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+                                
+];
 
 const gridMatrix2 = [
     [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0],
@@ -138,10 +138,12 @@ class GridSystem {
         this.cellSize = 40;
         this.padding = 2;
         this.startingSteps = 100;
-        this.tempSteps = 0;
+        this.maxSteps = 150;
+        //this.tempSteps = 0;
         this.winY = 11;
         this.winX = 37;
         this.walletMax = 1000;
+        this.openLockBonus = 15;
         this.triggerList = [];
 
         this.allAreas = {
@@ -204,18 +206,18 @@ class GridSystem {
 
         this.extraArr = ["TCR", "LXR", "LK", "JHA", "JV", "JL", "SZF", "H", "TJY", "KX"];
 
-        this.p1 = { x: 1, y: 1, lable: 2, id: this.extraArr[0], steps: 1000, area: "area3", wallet: 0, total: 0, storeSteps: 0 };
+        this.p1 = { x: 1, y: 19, lable: 2, id: this.extraArr[0], steps: 1000, area: "mainArea", wallet: 0, total: 0, storeSteps: 1000 };
 
-        this.p2 = { x: 20, y: 14, lable: 3, id: this.extraArr[1], steps: this.startingSteps, area: "area2", wallet: 0, total: 2500, storeSteps: 0 };
-        this.p3 = { x: 23, y: 15, lable: 4, id: this.extraArr[2], steps: this.startingSteps, area: "area2", wallet: 0, total: 2300, storeSteps: 0 };
-        this.p4 = { x: 22, y: 18, lable: 5, id: this.extraArr[3], steps: this.startingSteps, area: "area2", wallet: 0, total: 1400, storeSteps: 0 };
-        this.p5 = { x: 17, y: 9, lable: 6, id: this.extraArr[4], steps: this.startingSteps, area: "area2", wallet: 0, total: 3600, storeSteps: 0 };
+        this.p2 = { x: 1, y: 1, lable: 3, id: this.extraArr[1], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 2500, storeSteps: 0 };
+        this.p3 = { x: 1, y: 4, lable: 4, id: this.extraArr[2], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 2300, storeSteps: 0 };
+        this.p4 = { x: 1, y: 7, lable: 5, id: this.extraArr[3], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 1400, storeSteps: 0 };
+        this.p5 = { x: 1, y: 10, lable: 6, id: this.extraArr[4], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 3600, storeSteps: 0 };
 
-        this.p6 = { x: 23, y: 13, lable: 7, id: this.extraArr[5], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 2000, storeSteps: 0 };
-        this.p7 = { x: 34, y: 12, lable: 8, id: this.extraArr[6], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 5300, storeSteps: 0 };
-        this.p8 = { x: 17, y: 19, lable: 9, id: this.extraArr[7], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 0, storeSteps: 0 };
-        this.p9 = { x: 2, y: 12, lable: 10, id: this.extraArr[8], steps: 300, area: "mainArea", wallet: 0, total: 0, storeSteps: 0 };
-        this.p10 = { x: 2, y: 11, lable: 11, id: this.extraArr[9], steps: 300, area: "mainArea", wallet: 0, total: 0, storeSteps: 0 };
+        this.p6 = { x: 1, y: 13, lable: 7, id: this.extraArr[5], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 2000, storeSteps: 0 };
+        this.p7 = { x: 1, y: 16, lable: 8, id: this.extraArr[6], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 5300, storeSteps: 0 };
+        this.p8 = { x: 7, y: 1, lable: 9, id: this.extraArr[7], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 0, storeSteps: 0 };
+        this.p9 = { x: 7, y: 19, lable: 10, id: this.extraArr[8], steps: 300, area: "mainArea", wallet: 0, total: 0, storeSteps: 0 };
+        this.p10 = { x: 2, y: 11, lable: 11, id: this.extraArr[9], steps: 300, area: "area2", wallet: 0, total: 0, storeSteps: 0 };
 
         this.playersArr = [this.p1, this.p2, this.p3, this.p4, this.p5, this.p6, this.p7, this.p8, this.p9, this.p10];
 
@@ -225,14 +227,123 @@ class GridSystem {
 
         //PLS COPY PASTE THIS OBJECT TO INDEX.JS "LABLE LOCK FUNCTION AND FLIP ROW WITH COL"
         this.allLocksCoord = {
-            "area4,3,6":{head:"Lock ID: 1",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"1"},
-            "area4,3,7":{head:"Lock ID: 2",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"2"},
-            "area4,5,11":{head:"Lock ID: 3",body:"Unlock: Cyc 15secs <br> next line",trigger:"",id:"3"}
+            "mainArea,3,2":{head:"Lock ID: 1",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"1"},
+            "mainArea,3,5":{head:"Lock ID: 2",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"2"},
+            "mainArea,3,8":{head:"Lock ID: 3",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"3"},
+            "mainArea,3,11":{head:"Lock ID: 4",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"4"},
+            "mainArea,3,14":{head:"Lock ID: 5",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"5"},
+            "mainArea,3,17":{head:"Lock ID: 6",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"6"},
+            "mainArea,7,3":{head:"Lock ID: 7",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"7"},
+            "mainArea,7,17":{head:"Lock ID: 8",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"8"},
+
+            "mainArea,6,10":{head:"Lock ID: 9",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"9"},
+            "mainArea,11,8":{head:"Lock ID: 10",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"10"},
+            "mainArea,11,12":{head:"Lock ID: 11",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"11"},
+            "mainArea,9,5":{head:"Lock ID: 12",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"12"},
+            "mainArea,9,9":{head:"Lock ID: 13",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"13"},
+            "mainArea,9,11":{head:"Lock ID: 14",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"14"},
+            "mainArea,9,15":{head:"Lock ID: 15",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"15"},
+
+            "mainArea,13,7":{head:"Lock ID: 16",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"16"},
+            "mainArea,13,13":{head:"Lock ID: 17",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"17"},
+            "mainArea,14,2":{head:"Lock ID: 18",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"18"},
+            "mainArea,14,4":{head:"Lock ID: 19",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"19"},
+            "mainArea,14,9":{head:"Lock ID: 20",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"20"},
+            "mainArea,14,11":{head:"Lock ID: 21",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"21"},
+            "mainArea,14,16":{head:"Lock ID: 22",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"22"},
+            "mainArea,14,18":{head:"Lock ID: 23",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"23"},
+
+            "mainArea,18,2":{head:"Lock ID: 24",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"24"},
+            "mainArea,18,6":{head:"Lock ID: 25",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"25"},
+            "mainArea,18,9":{head:"Lock ID: 26",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"26"},
+            "mainArea,18,12":{head:"Lock ID: 27",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"27"},
+            "mainArea,18,16":{head:"Lock ID: 28",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"28"},
+            "mainArea,18,19":{head:"Lock ID: 29",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"29"},
+            "mainArea,20,10":{head:"Lock ID: 30",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"30"},
+
+            "mainArea,22,1":{head:"Lock ID: 31",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"31"},
+            "mainArea,22,3":{head:"Lock ID: 32",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"32"},
+            "mainArea,22,6":{head:"Lock ID: 33",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"33"},
+            "mainArea,22,9":{head:"Lock ID: 34",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"34"},
+            "mainArea,22,11":{head:"Lock ID: 35",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"35"},
+            "mainArea,22,14":{head:"Lock ID: 36",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"36"},
+            "mainArea,22,16":{head:"Lock ID: 37",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"37"},
+            "mainArea,22,19":{head:"Lock ID: 38",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"38"},
+
+            "mainArea,26,3":{head:"Lock ID: 39",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"39"},
+            "mainArea,26,16":{head:"Lock ID: 40",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"40"},
+            "mainArea,28,3":{head:"Lock ID: 41",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"41"},
+            "mainArea,28,6":{head:"Lock ID: 42",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"42"},
+            "mainArea,28,9":{head:"Lock ID: 43",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"43"},
+            "mainArea,28,13":{head:"Lock ID: 44",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"44"},
+            "mainArea,28,16":{head:"Lock ID: 45",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"45"},
+            "mainArea,31,4":{head:"Lock ID: 46",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"46"},
+            "mainArea,31,7":{head:"Lock ID: 47",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"47"},
+            "mainArea,31,10":{head:"Lock ID: 48",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"48"},
+            "mainArea,31,13":{head:"Lock ID: 49",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"49"},
+            "mainArea,31,16":{head:"Lock ID: 50",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"50"}
+
+
         }
         this.lockIds = {
-            1: {x:3, y:6, area:this.matrix4, password:"111"},
-            2: {x:3, y:7, area:this.matrix4, password:"2222"},
-            3: {x:5, y:11, area:this.matrix4, password:"33333"}
+            1: {x:3, y:2, area:this.matrixMain, password:"111"},
+            2: {x:3, y:5, area:this.matrixMain, password:"22"},
+            3: {x:3, y:8, area:this.matrixMain, password:"33"},
+            4: {x:3, y:11, area:this.matrixMain, password:"44"},
+            5: {x:3, y:14, area:this.matrixMain, password:"55"},
+            6: {x:3, y:17, area:this.matrixMain, password:"66"},
+            7: {x:7, y:3, area:this.matrixMain, password:"77"},
+            8: {x:7, y:17, area:this.matrixMain, password:"88"},
+
+            9: {x:6, y:10, area:this.matrixMain, password:"99"},
+            10: {x:11, y:8, area:this.matrixMain, password:"10"},
+            11: {x:11, y:12, area:this.matrixMain, password:"11"},
+            12: {x:9, y:5, area:this.matrixMain, password:"12"},
+            13: {x:9, y:9, area:this.matrixMain, password:"13"},
+            14: {x:9, y:11, area:this.matrixMain, password:"14"},
+            15: {x:9, y:15, area:this.matrixMain, password:"15"},
+
+            16: {x:13, y:7, area:this.matrixMain, password:"16"},
+            17: {x:13, y:13, area:this.matrixMain, password:"17"},
+            18: {x:14, y:2, area:this.matrixMain, password:"18"},
+            19: {x:14, y:4, area:this.matrixMain, password:"19"},
+            20: {x:14, y:9, area:this.matrixMain, password:"20"},
+            21: {x:14, y:11, area:this.matrixMain, password:"21"},
+            22: {x:14, y:16, area:this.matrixMain, password:"22"},
+            23: {x:14, y:18, area:this.matrixMain, password:"23"},
+
+            24: {x:18, y:2, area:this.matrixMain, password:"24"},
+            25: {x:18, y:6, area:this.matrixMain, password:"25"},
+            26: {x:18, y:9, area:this.matrixMain, password:"26"},
+            27: {x:18, y:12, area:this.matrixMain, password:"27"},
+            28: {x:18, y:16, area:this.matrixMain, password:"28"},
+            29: {x:18, y:19, area:this.matrixMain, password:"29"},
+            30: {x:20, y:10, area:this.matrixMain, password:"30"},
+
+            31: {x:22, y:1, area:this.matrixMain, password:"31"},
+            32: {x:22, y:3, area:this.matrixMain, password:"32"},
+            33: {x:22, y:6, area:this.matrixMain, password:"33"},
+            34: {x:22, y:9, area:this.matrixMain, password:"34"},
+            35: {x:22, y:11, area:this.matrixMain, password:"35"},
+            36: {x:22, y:14, area:this.matrixMain, password:"36"},
+            37: {x:22, y:16, area:this.matrixMain, password:"37"},
+            38: {x:22, y:19, area:this.matrixMain, password:"38"},
+
+            39: {x:26, y:3, area:this.matrixMain, password:"39"},
+            40: {x:26, y:16, area:this.matrixMain, password:"40"},
+
+            41: {x:28, y:3, area:this.matrixMain, password:"41"},
+            42: {x:28, y:6, area:this.matrixMain, password:"42"},
+            43: {x:28, y:9, area:this.matrixMain, password:"43"},
+            44: {x:28, y:13, area:this.matrixMain, password:"44"},
+            45: {x:28, y:16, area:this.matrixMain, password:"45"},
+
+            46: {x:31, y:4, area:this.matrixMain, password:"46"},
+            47: {x:31, y:7, area:this.matrixMain, password:"47"},
+            48: {x:31, y:10, area:this.matrixMain, password:"48"},
+            49: {x:31, y:13, area:this.matrixMain, password:"49"},
+            50: {x:31, y:16, area:this.matrixMain, password:"50"},
+
         }
 
         this.moveSwitch = 0;
@@ -488,6 +599,7 @@ io.sockets.on('connection', function (sock) {
     sock.on('newuser', (data) => {
 
         sock.id = data; //"TCR"
+        io.emit('chat-to-clients', data + " connected");
         const playersArr = gridSystem.playersArr;
 
         const gridSysKey = getPlayerObjectKey(sock.id);
@@ -498,7 +610,7 @@ io.sockets.on('connection', function (sock) {
         var sendGridMatrix4 = gridSystem.matrix4;
         sock.emit('loadMatrix', { sendGridMatrix1, sendGridMatrix2, sendGridMatrix3, sendGridMatrix4, playersArr });
         io.emit('pushTriggerList', gridSystem.triggerList);
-       
+
 
         sock.on('keyPress', function (data) {
 
@@ -530,10 +642,9 @@ io.sockets.on('connection', function (sock) {
 
     });
 
-    /* sock.on('disconnect', function() {
-        delete SOCKET_LIST[sock.id];
-        Player.onDisconnect(sock);
-    }); */
+    sock.on('disconnect', () => {
+        io.emit('chat-to-clients', sock.id + " disconnected");
+    });
 
     sock.on('openLock', (data) => {
         gridSystem.openLock(data);
@@ -563,7 +674,7 @@ io.sockets.on('connection', function (sock) {
         gridSystem.playersArr.forEach((player) => {
             if (player.id === data.studentId) {
                 var convertToNum = Number(data.getNum)
-                if (player.steps + convertToNum > 30) {
+                if (player.steps + convertToNum > gridSystem.maxSteps) {
                     var message = player.id + " steps capacity exceeded! Failed."
                     io.emit('chat-to-clients', message);
                 } else {
@@ -579,13 +690,13 @@ io.sockets.on('connection', function (sock) {
     sock.on('sendPW', (data) => {
         gridSystem.playersArr.forEach((player) => {
             if (player.id === data.studentId) {
-                var convertToNum = Number(data.getNum);
-                var message = "Password for lock id: " + convertToNum + " is " + gridSystem.lockIds[convertToNum].password;
-                var playerId = player.id;
-                var message2 = "Password successfully sent to " + playerId;
+                const convertToNum = Number(data.getNum);
+                const message = "Password for lock id: " + convertToNum + " is " + gridSystem.lockIds[convertToNum].password;
+                const playerId = player.id;
+                const message2 = "Password successfully sent to " + playerId;
+                const gridSysPlyrKey = getPlayerObjectKey(playerId);
+                gridSystem[gridSysPlyrKey].steps = gridSystem[gridSysPlyrKey].storeSteps + gridSystem.openLockBonus;
 
-                // const gridSysPlyrKey = getPlayerObjectKey(player.id);
-                // gridSystem[gridSysPlyrKey].steps = gridSystem[gridSysPlyrKey].storeSteps + 30;
 
                 var index = gridSystem.triggerList.indexOf(playerId + " - " + convertToNum);
                 if (index !== -1) {
@@ -653,19 +764,17 @@ io.sockets.on('connection', function (sock) {
     });
 
     sock.on('unlockUsingPassword', (data) => {
-
+        
         const lockId = getLockIdFromPassword(data.extractNum);
 
         if (lockId === undefined) return
         gridSystem.openLock(lockId);
-        
-        //io.emit('removeLockNumber', lockId);
 
-        const gridSysPlyrKey = getPlayerObjectKey(data.playerId);
-        gridSystem[gridSysPlyrKey].steps = gridSystem[gridSysPlyrKey].storeSteps + 30;
+
+        // const gridSysPlyrKey = getPlayerObjectKey(data.playerId);
+        // gridSystem[gridSysPlyrKey].steps = gridSystem[gridSysPlyrKey].storeSteps + 30;
         gridSystem.emitToUsers();
-        io.emit('chat-to-clients', data.playerId + " unlocked Lock ID:" + lockId);
-        io.emit('chat-to-clients', "Success!");
+        io.emit('chat-to-clients', data.playerId + " unlock success ID:" + lockId);
         
     });
 

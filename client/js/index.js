@@ -450,15 +450,72 @@ class GridSystemClient {
             [this.items[20].playerId]: {font:"17px Times New Roman",rowValue:21},
             [this.items[30].playerId]: {font:"23px Times New Roman",rowValue:21,text:"1",txtRow:22,txtCol:12}
         }
-        this.locks = {
-            lock1: "1",
-            lock2: "2"
+        // this.locks = {
+        //     lock1: "1",
+        //     lock2: "2"
+        // }
+        this.allLocksCoord = { //PLS INVERT X AND Y
+            "mainArea,2,3":{password:10,success:"",id:"1"},
+            "mainArea,5,3":{password:10,success:"",id:"2"},
+            "mainArea,8,3":{password:10,success:"",id:"3"},
+            "mainArea,11,3":{password:10,success:"",id:"4"},
+            "mainArea,14,3":{password:10,success:"",id:"5"},
+            "mainArea,17,3":{password:10,success:"",id:"6"},
+            "mainArea,3,7":{password:10,success:"",id:"7"},
+            "mainArea,17,7":{password:10,success:"",id:"8"},
+
+            "mainArea,10,6":{password:10,success:"",id:"9"},
+            "mainArea,8,11":{password:10,success:"",id:"10"},
+            "mainArea,12,11":{password:10,success:"",id:"11"},
+            "mainArea,5,9":{password:10,success:"",id:"12"},
+            "mainArea,9,9":{password:10,success:"",id:"13"},
+            "mainArea,11,9":{password:10,success:"",id:"14"},
+            "mainArea,15,9":{password:10,success:"",id:"15"},
+
+            "mainArea,7,13":{password:10,success:"",id:"16"},
+            "mainArea,13,13":{password:10,success:"",id:"17"},
+            "mainArea,2,14":{password:10,success:"",id:"18"},
+            "mainArea,4,14":{password:10,success:"",id:"19"},
+            "mainArea,9,14":{password:10,success:"",id:"20"},
+            "mainArea,11,14":{password:10,success:"",id:"21"},
+            "mainArea,16,14":{password:10,success:"",id:"22"},
+            "mainArea,18,14":{password:10,success:"",id:"23"},
+
+            "mainArea,2,18":{password:10,success:"",id:"24"},
+            "mainArea,6,18":{password:10,success:"",id:"25"},
+            "mainArea,9,18":{password:10,success:"",id:"26"},
+            "mainArea,12,18":{password:10,success:"",id:"27"},
+            "mainArea,16,18":{password:10,success:"",id:"28"},
+            "mainArea,19,18":{password:10,success:"",id:"29"},
+            "mainArea,10,20":{password:10,success:"",id:"30"},
+
+            "mainArea,1,22":{password:10,success:"",id:"31"},
+            "mainArea,3,22":{password:10,success:"",id:"32"},
+            "mainArea,6,22":{password:10,success:"",id:"33"},
+            "mainArea,9,22":{password:10,success:"",id:"34"},
+            "mainArea,11,22":{password:10,success:"",id:"35"},
+            "mainArea,14,22":{password:10,success:"",id:"36"},
+            "mainArea,16,22":{password:10,success:"",id:"37"},
+            "mainArea,19,22":{password:10,success:"",id:"38"},
+
+            "mainArea,3,26":{password:10,success:"",id:"39"},
+            "mainArea,16,26":{password:10,success:"",id:"40"},
+
+            "mainArea,3,28":{password:10,success:"",id:"41"},
+            "mainArea,6,28":{password:10,success:"",id:"42"},
+            "mainArea,9,28":{password:10,success:"",id:"43"},
+            "mainArea,13,28":{password:10,success:"",id:"44"},
+            "mainArea,16,28":{password:10,success:"",id:"45"},
+
+            "mainArea,4,31":{password:10,success:"",id:"46"},
+            "mainArea,7,31":{password:10,success:"",id:"47"},
+            "mainArea,10,31":{password:10,success:"",id:"48"},
+            "mainArea,13,31":{password:10,success:"",id:"49"},
+            "mainArea,16,31":{password:10,success:"",id:"50"},
         }
-        this.allLocksCoord = {
-            "area4,6,3":{password:10,success:"",id:"1"},
-            "area4,7,3":{password:13,success:"",id:"2"},
-            "area4,11,5":{password:13,success:"",id:"3"}
-        }
+        this.finishFlags = [
+            {x:32,y:6},{x:32,y:5},{x:32,y:14},{x:32,y:15}
+        ];
     }
 
     #setColorAndId(cellVal) {
@@ -506,7 +563,7 @@ class GridSystemClient {
 
     lableLocks (matrixLength, row, col) {
         const matrix = {
-            21: {area: "areaMain"},
+            21: {area: "mainArea"},
             20: {area: "area2"},
             18: {area: "area3"},
             17: {area: "area4"}        
@@ -558,10 +615,10 @@ class GridSystemClient {
         }
 
         const redDoorCoordinates = {
-            21: {
-                redDoor1: {x:29, y:1},
-                redDoor2: {x:29, y:19}
-            },
+            // 21: {
+            //     redDoor1: {x:29, y:1},
+            //     redDoor2: {x:29, y:19}
+            // },
             20: {
                 redDoor1: {x:1, y:3},
                 redDoor2: {x:21, y:11}
@@ -584,15 +641,22 @@ class GridSystemClient {
         }
 
         //CDM here:
-        cdmCoordinates[matrixLength].area.forEach((coordinate) => {
-            this.outlineContext.fillStyle = "goldenrod";
-            this.outlineContext.fillRect(coordinate.x * (this.cellSize + this.padding),
-                coordinate.y * (this.cellSize + this.padding),
-                this.cellSize, this.cellSize);
-            this.outlineContext.fillStyle = "black";
-            this.outlineContext.font = "10px Times New Roman";
-            this.outlineContext.fillText("CDM", coordinate.x * (this.cellSize + this.padding) + 2,
-                coordinate.y * (this.cellSize + this.padding) + 21);
+        // cdmCoordinates[matrixLength].area.forEach((coordinate) => {
+        //     this.outlineContext.fillStyle = "goldenrod";
+        //     this.outlineContext.fillRect(coordinate.x * (this.cellSize + this.padding),
+        //         coordinate.y * (this.cellSize + this.padding),
+        //         this.cellSize, this.cellSize);
+        //     this.outlineContext.fillStyle = "black";
+        //     this.outlineContext.font = "10px Times New Roman";
+        //     this.outlineContext.fillText("CDM", coordinate.x * (this.cellSize + this.padding) + 2,
+        //         coordinate.y * (this.cellSize + this.padding) + 21);
+        // });
+
+        if (matrixLength != 21) {return}
+        this.finishFlags.forEach((flag) => {
+            this.outlineContext.font = "17px Times New Roman";
+            this.outlineContext.fillText("🏁", flag.x * (this.cellSize + this.padding) + 3,
+                flag.y * (this.cellSize + this.padding) + 21);
         });
 
 
@@ -647,7 +711,13 @@ document.addEventListener("keydown", (e) => {
 
 //============================================================================================================
 sock.on('chat-to-clients', data => {
-    appendMessage(data);
+    var message = data;
+    // var extractNicknameAtPrefix = message.slice(0, 4).replace(/[^A-Z]+/g, "");
+    // const sliceAfter = extractNicknameAtPrefix.length
+    // if (message.slice(sliceAfter + 2, sliceAfter + 4) === "pw") {
+    // message = extractNicknameAtPrefix + ": pw *****"
+    // }
+    appendMessage(message);
 });
 sock.on('pm', data => {
     if (nickname === data.playerId) {
@@ -668,19 +738,11 @@ sock.on('pushTriggerList', data => {
     console.log(triggerList);
 });
 
-// sock.on('removeLockNumber', data => {
-//     const objectEntry = getEntryFromId(data);
-//     console.log(objectEntry);
-//     getObject.allLocksCoord[objectEntry].id = "";
-//     getObject.render();
-//     console.log(getObject.allLocksCoord);
-// });
-
 sock.on('loadMatrix', (data) => {
 
     var i = 0;
     elementsArr.forEach((element) => {
-        element.innerHTML = data.playersArr[i].id + " Stps: " + data.playersArr[i].steps + "/30 || Wllt: " + data.playersArr[i].wallet + "/1000 || Ttl: " + data.playersArr[i].total;
+        element.innerHTML = data.playersArr[i].id + " Stps: " + data.playersArr[i].steps + "/150 || Wllt: " + data.playersArr[i].wallet + "/1000 || Ttl: " + data.playersArr[i].total;
 
         const playerMatrix = [data.playersArr[i].id, data.playersArr[i].area].join(",");
 
@@ -708,7 +770,7 @@ sock.on('sendMatrix', (data) => {
 
     var i = 0;
     elementsArr.forEach((element) => {
-        element.innerHTML = data.playersArr[i].id + " Stps: " + data.playersArr[i].steps + "/30 || Wllt: " + data.playersArr[i].wallet + "/1000 || Ttl: " + data.playersArr[i].total;
+        element.innerHTML = data.playersArr[i].id + " Stps: " + data.playersArr[i].steps + "/150 || Wllt: " + data.playersArr[i].wallet + "/1000 || Ttl: " + data.playersArr[i].total;
 
         const playerMatrix = [data.playersArr[i].id, data.playersArr[i].area].join(",");
         
@@ -728,13 +790,4 @@ sock.on('sendMatrix', (data) => {
    
 });
 
-// sock.on('sendBlankMatrix', () => {
-    
-//     var canvas = document.querySelector("canvas");
 
-//     canvas.parentNode.removeChild(canvas);
-    
-//     var context = canvas.getContext('2d');
-//     canvas.style.background = 'black';
-//     context.clearRect(0, 0, canvas.width, canvas.height);
-// });
