@@ -227,7 +227,7 @@ class GridSystem {
 
         //PLS COPY PASTE THIS OBJECT TO INDEX.JS "LABLE LOCK FUNCTION AND FLIP ROW WITH COL"
         this.allLocksCoord = {
-            "mainArea,3,2":{head:"Lock ID: 1",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"1"},
+            "mainArea,3,2":{head:"Lock ID: 1",body:"Unlock: Cyc 12secs OR Cyc 15secs X2",trigger:"",id:"1"},
             "mainArea,3,5":{head:"Lock ID: 2",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"2"},
             "mainArea,3,8":{head:"Lock ID: 3",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"3"},
             "mainArea,3,11":{head:"Lock ID: 4",body:"Unlock: Cyc 12secs <br> next line",trigger:"",id:"4"},
@@ -342,7 +342,7 @@ class GridSystem {
             47: {x:31, y:7, area:this.matrixMain, password:"47"},
             48: {x:31, y:10, area:this.matrixMain, password:"48"},
             49: {x:31, y:13, area:this.matrixMain, password:"49"},
-            50: {x:31, y:16, area:this.matrixMain, password:"50"},
+            50: {x:31, y:16, area:this.matrixMain, password:"50"}
 
         }
 
