@@ -370,7 +370,7 @@ function appendMessage(message) {
     });
 }
 
-studentsArr = ["TCR", "LXR", "LK", "JHA", "JV", "JL", "SZF", "H", "TJY", "KX"];
+studentsArr = ["TCR", "LXR", "LK", "JHA", "JV", "JL", "SZF", "H", "CJH", "KX"];
 //studentsArr = ["TCR", "LOK", "KSY", "KN", "JT", "CJH", "LSH", "KX", "TJY", "LEN"];
 elementsArr = [];
 
@@ -414,7 +414,7 @@ class GridSystemClient {
         //this.topContext = this.#getContext(0, 0, "#111", true);
         this.cellSize = 27;
         this.padding = 2;
-        this.students = ["TCR", "LXR", "LK", "JHA", "JV", "JL", "SZF", "H", "TJY", "KX"];
+        this.students = ["TCR", "LXR", "LK", "JHA", "JV", "JL", "SZF", "H", "CJH", "KX"];
         
         this.cdm = {
             area1: [{x:2,y:10},{x:17,y:10},{x:20,y:2},{x:20,y:18},{x:23,y:3},{x:23,y:17},{x:30,y:4},{x:30,y:16},{x:34,y:10}],
@@ -435,7 +435,7 @@ class GridSystemClient {
         this.p7 = { color: "orange", lable: 8, id: this.students[6] };
         this.p8 = { color: "teal", lable: 9, id: this.students[7] };
 
-        this.p9 = { color: "white", lable: 10, id: this.students[8] };
+        this.p9 = { color: "blue", lable: 10, id: this.students[8] };
         this.p10 = { color: "fuchsia", lable: 11, id: this.students[9] };
 
         this.playersArr = [this.p1, this.p2, this.p3, this.p4, this.p5, this.p6, this.p7, this.p8, this.p9, this.p10];
@@ -742,7 +742,7 @@ sock.on('loadMatrix', (data) => {
 
     var i = 0;
     elementsArr.forEach((element) => {
-        element.innerHTML = data.playersArr[i].id + " Stps: " + data.playersArr[i].steps + "/150 || Wllt: " + data.playersArr[i].wallet + "/1000 || Ttl: " + data.playersArr[i].total;
+        element.innerHTML = data.playersArr[i].id + " Stps: " + data.playersArr[i].steps + "/500";
 
         const playerMatrix = [data.playersArr[i].id, data.playersArr[i].area].join(",");
 
@@ -770,7 +770,7 @@ sock.on('sendMatrix', (data) => {
 
     var i = 0;
     elementsArr.forEach((element) => {
-        element.innerHTML = data.playersArr[i].id + " Stps: " + data.playersArr[i].steps + "/150 || Wllt: " + data.playersArr[i].wallet + "/1000 || Ttl: " + data.playersArr[i].total;
+        element.innerHTML = data.playersArr[i].id + " Stps: " + data.playersArr[i].steps + "/500";
 
         const playerMatrix = [data.playersArr[i].id, data.playersArr[i].area].join(",");
         
