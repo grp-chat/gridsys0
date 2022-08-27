@@ -39,23 +39,23 @@ const gridMatrix = [
     [1,0,0,30,0,0,1,0,0,1,0,0,0,0,30,0,0,0,30,0,0,0,1,1,1,1,1,0,1,1,1,1,0,1],
     [1,1,1,1,0,0,1,30,1,1,0,0,0,0,1,1,1,1,1,0,0,0,30,0,0,0,30,0,30,0,0,1,0,1],
     [1,0,0,1,0,0,0,0,0,1,0,0,0,0,30,0,0,0,1,0,0,0,1,0,0,0,1,0,1,0,0,30,0,1],
-    [1,0,0,30,0,0,0,0,0,30,0,0,0,0,1,0,0,0,1,0,0,0,1,1,1,1,1,1,1,0,0,1,0,1],
+    [1,0,0,30,0,0,0,0,0,30,0,0,0,0,1,0,0,0,1,0,0,0,1,1,1,1,1,1,1,1,0,1,0,1],
     [1,1,1,1,0,0,0,0,0,1,0,0,0,0,1,0,0,0,30,0,0,0,30,0,0,0,0,0,30,0,0,1,0,1],
     [1,0,0,1,0,0,0,0,0,1,1,1,1,30,1,1,1,1,1,0,0,0,1,0,0,0,0,0,1,0,0,30,0,1],
-    [1,0,0,30,0,0,0,0,0,1,0,30,0,0,1,0,0,0,1,0,0,0,1,1,1,1,1,1,1,0,0,1,0,1],
+    [1,0,0,30,0,0,0,0,0,1,0,30,0,0,1,0,0,0,1,0,0,0,1,1,1,1,1,1,1,1,0,1,0,1],
     [1,1,1,1,0,0,0,0,0,30,0,1,0,0,30,0,0,0,30,0,0,0,30,0,0,0,0,0,30,0,0,1,0,1],
     [1,0,0,1,1,1,30,1,1,1,0,1,0,0,1,1,1,1,1,1,30,1,1,0,0,0,0,0,1,0,0,30,0,1],
     [1,0,0,30,0,0,0,0,0,30,0,1,0,0,30,0,0,0,1,0,0,0,30,0,0,0,0,0,1,0,0,1,0,1],
-    [1,1,1,1,0,0,0,0,0,1,0,30,0,0,1,0,0,0,30,0,0,0,1,1,1,1,1,1,1,0,0,1,0,1],
+    [1,1,1,1,0,0,0,0,0,1,0,30,0,0,1,0,0,0,30,0,0,0,1,1,1,1,1,1,1,1,0,1,0,1],
     [1,0,0,1,0,0,0,0,0,1,1,1,1,30,1,1,1,1,1,0,0,0,1,0,0,0,0,0,30,0,0,30,0,1],
     [1,0,0,30,0,0,0,0,0,1,0,0,0,0,1,0,0,0,1,0,0,0,30,0,0,0,0,0,1,0,0,1,0,1],
-    [1,1,1,1,0,0,0,0,0,30,0,0,0,0,1,0,0,0,1,0,0,0,1,1,1,1,1,1,1,0,0,1,0,1],
+    [1,1,1,1,0,0,0,0,0,30,0,0,0,0,1,0,0,0,1,0,0,0,1,1,1,1,1,1,1,1,0,1,0,1],
     [1,0,0,1,0,0,0,0,0,1,0,0,0,0,30,0,0,0,30,0,0,0,30,0,0,0,30,0,30,0,0,30,0,1],
     [1,0,0,30,0,0,1,30,1,1,0,0,0,0,1,1,1,1,1,0,0,0,1,0,0,0,1,0,1,0,0,1,0,1],
     [1,1,1,1,0,0,1,0,0,1,0,0,0,0,30,0,0,0,1,0,0,0,1,1,1,1,1,0,1,1,1,1,0,1],
     [1,0,0,0,0,0,1,0,0,1,0,0,0,0,1,0,0,0,30,0,0,0,30,0,0,0,0,0,1,1,1,0,0,1],
     [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
-                                
+                                    
 ];
 
 const gridMatrix2 = [
@@ -208,12 +208,12 @@ class GridSystem {
 
         this.p1 = { x: 1, y: 19, lable: 2, id: this.extraArr[0], steps: 1000, area: "mainArea", wallet: 0, total: 0, storeSteps: 1000 };
 
-        this.p2 = { x: 1, y: 1, lable: 3, id: this.extraArr[1], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 2500, storeSteps: 0 };
-        this.p3 = { x: 1, y: 4, lable: 4, id: this.extraArr[2], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 2300, storeSteps: 0 };
-        this.p4 = { x: 1, y: 7, lable: 5, id: this.extraArr[3], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 1400, storeSteps: 0 };
-        this.p5 = { x: 1, y: 10, lable: 6, id: this.extraArr[4], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 3600, storeSteps: 0 };
+        this.p2 = { x: 17, y: 2, lable: 3, id: this.extraArr[1], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 2500, storeSteps: 0 };
+        this.p3 = { x: 21, y: 6, lable: 4, id: this.extraArr[2], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 2300, storeSteps: 0 };
+        this.p4 = { x: 17, y: 9, lable: 5, id: this.extraArr[3], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 1400, storeSteps: 0 };
+        this.p5 = { x: 16, y: 2, lable: 6, id: this.extraArr[4], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 3600, storeSteps: 0 };
 
-        this.p6 = { x: 1, y: 13, lable: 7, id: this.extraArr[5], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 2000, storeSteps: 0 };
+        this.p6 = { x: 17, y: 6, lable: 7, id: this.extraArr[5], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 2000, storeSteps: 0 };
         this.p7 = { x: 1, y: 16, lable: 8, id: this.extraArr[6], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 5300, storeSteps: 0 };
         this.p8 = { x: 7, y: 1, lable: 9, id: this.extraArr[7], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 0, storeSteps: 0 };
         this.p9 = { x: 7, y: 19, lable: 10, id: this.extraArr[8], steps: this.startingSteps, area: "mainArea", wallet: 0, total: 0, storeSteps: 0 };
